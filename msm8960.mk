@@ -40,7 +40,6 @@ PRODUCT_COPY_FILES += \
 # Audio
 PRODUCT_PACKAGES += \
     audio.a2dp.default \
-    audio_policy.msm8960 \
     audio.primary.msm8960 \
     audio.r_submix.default \
     audio.usb.default \
@@ -66,6 +65,7 @@ PRODUCT_PACKAGES += \
 
 # Media
 PRODUCT_COPY_FILES += \
+    frameworks/av/media/libstagefright/data/media_codecs_ffmpeg.xml:system/etc/media_codecs_ffmpeg.xml \
     frameworks/av/media/libstagefright/data/media_codecs_google_audio.xml:system/etc/media_codecs_google_audio.xml \
     frameworks/av/media/libstagefright/data/media_codecs_google_telephony.xml:system/etc/media_codecs_google_telephony.xml \
     frameworks/av/media/libstagefright/data/media_codecs_google_video.xml:system/etc/media_codecs_google_video.xml \
@@ -91,10 +91,6 @@ PRODUCT_BOOT_JARS += \
 PRODUCT_PACKAGES += \
     power.msm8960
 
-# QRNGD
-PRODUCT_PACKAGES += \
-    qrngd
-
 # USB
 PRODUCT_PACKAGES += \
     com.android.future.usb.accessory
@@ -103,5 +99,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     dhcpcd.conf \
     hostapd \
+    hostapd_default.conf \
     wpa_supplicant \
     wpa_supplicant.conf
